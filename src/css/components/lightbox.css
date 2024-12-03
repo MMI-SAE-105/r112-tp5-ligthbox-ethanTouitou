@@ -1,0 +1,12 @@
+/**
+* Lightbox
+*/
+dialog {
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+dialog::backdrop {
+    background: #ffa9a9cc;
+}
