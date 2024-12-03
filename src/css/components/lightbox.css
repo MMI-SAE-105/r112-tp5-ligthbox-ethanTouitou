@@ -10,3 +10,21 @@ dialog {
 dialog::backdrop {
     background: #ffa9a9cc;
 }
+
+#lightbox {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    background: white;
+}
+
+#lightbox img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid white;
+    box-sizing: border-box;
+}
