@@ -1,4 +1,5 @@
 // *** LIGHTBOX ***
+
 document.addEventListener('DOMContentLoaded', () => {
     const lightBox = document.querySelector('#lightbox');
     const lightBoxImage = lightBox.querySelector('img');
@@ -7,11 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     thumbnails.forEach(thumbnail => {
         thumbnail.addEventListener('click', () => {
             lightBoxImage.src = thumbnail.dataset.fullImg;
+            lightBox.classList.add('entrée'); // Ajouter la classe "entrée" lors de l'ouverture
             lightBox.showModal();
         });
     });
 
     lightBox.addEventListener('click', () => {
-        lightBox.close();
+        lightBox.classList.add('sortie');
+        lightBox.addEventListener('animationend', () => {
+            lightBox.classList.remove('sortie');
+            lightBox.close();
+        }, { once: true });
     });
 });
